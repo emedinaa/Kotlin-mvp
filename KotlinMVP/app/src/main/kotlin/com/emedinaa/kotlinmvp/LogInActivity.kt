@@ -49,7 +49,6 @@ class LogInActivity : AppCompatActivity(),LogInView {
         vLoading = findViewById(R.id.llayLoading)
 
         btnLogIn!!.setOnClickListener{
-            //Toast.makeText(this,"click",Toast.LENGTH_LONG).show()
 
             username= eteEmail!!.text.toString().trim()
             password=etePassword!!.text.toString().trim()

@@ -31,7 +31,6 @@ class LogInInteractor {
             override fun success(logInResponse: LogInResponse?, response: Response?) {
 
                 if(logInResponse!!.isSuccess()){
-                    //Log.v("KT","email "+logInResponse!!.email)
                     var user:User= userDataMapper!!.transformResponse(logInResponse)
                     logInCallback.onLogInSuccess(user)
                 }else{
