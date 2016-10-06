@@ -19,6 +19,7 @@
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
             android:hint="Email"
+            android:text="emedinaa@gmail.com"
             android:ems="10"
             android:id="@+id/eteEmail" />
 
@@ -26,6 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
+            android:text="123456"
             android:inputType="textPassword"
             android:ems="10"
             android:id="@+id/etePassword" />
@@ -33,7 +35,6 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:text="LogIn"
             android:id="@+id/btnLogIn" />
     </LinearLayout>
