@@ -71,7 +71,7 @@ class LogInActivity : AppCompatActivity(),LogInView {
         val intent = Intent(this, DashboardActivity::class.java)
         //intent.putExtras(bundle)
         startActivity(intent)
-        finish()
+        //finish()
     }
 
     override fun showMessageError(message: String) {
