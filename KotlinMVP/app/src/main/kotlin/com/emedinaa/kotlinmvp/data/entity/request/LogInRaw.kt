@@ -3,9 +3,11 @@ package com.emedinaa.kotlinmvp.data.entity.request
 /**
  * Created by eduardomedina on 6/10/16.
  */
-class LogInRaw {
-
-    var login:String?=null
-    var password:String?=null
-
+data class LogInRaw(val username:String, val password:String) {
+    /*
+        {
+            "username": "emedinaa@gmail.com",
+            "password": "123456"
+        }
+     */
 }

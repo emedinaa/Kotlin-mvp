@@ -1,6 +1,5 @@
 package com.emedinaa.kotlinmvp.model.interactor
 
-import com.emedinaa.kotlinmvp.data.entity.UserEntity
 import com.emedinaa.kotlinmvp.data.entity.request.LogInRaw
 import com.emedinaa.kotlinmvp.data.entity.response.LogInResponse
 import com.emedinaa.kotlinmvp.data.mapper.UserDataMapper
@@ -23,9 +22,7 @@ class LogInInteractor {
 
     fun logIn(email:String,password:String, logInCallback: LogInCallback){
 
-        var logInRaw:LogInRaw= LogInRaw()
-        logInRaw.login= email
-        logInRaw.password= password
+        var logInRaw:LogInRaw= LogInRaw(email,password)
 
         ApiClient.getMyApiClient().logIn(logInRaw,object:Callback<LogInResponse>{
             override fun success(logInResponse: LogInResponse?, response: Response?) {
@@ -34,13 +31,11 @@ class LogInInteractor {
                     var user:User= userDataMapper!!.transformResponse(logInResponse)
                     logInCallback.onLogInSuccess(user)
                 }else{
-                    logInCallback.onLogInError("Error")
+                    logInCallback.onLogInError("an error occurred...")
                 }
-
             }
 
             override fun failure(error: RetrofitError?) {
-
                 var message:Any= error!!.message as Any
                 logInCallback.onLogInError(message)
             }

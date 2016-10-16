@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">KotlinMVP</string>
+
+    <string name="password">Password</string>
+    <string name="enviar">Enviar</string>
+    <string name="registrar">Registrar</string>
+    <string name="bienvenido">Bienvenido</string>
+    <string name="msg_ingresar">Ingresar este campo</string>
+
+    <string name="username_tmp">emedinaa@gmail.com</string>
+    <string name="password_tmp">123456</string>
 </resources>

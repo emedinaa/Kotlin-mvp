@@ -5,13 +5,13 @@ package com.emedinaa.kotlinmvp.data.entity.response
  */
 open class BaseResponse {
 
-    private val SUCCESS:Int= 0
+    private val SUCCESS:Int= 200
 
-    private var code:Int?=0
-    private var message:String?=null
+    private var msg:String?=null
+    private var status:Int?=0
 
     fun isSuccess():Boolean{
-        if(code==SUCCESS)return  true
+        if(status==SUCCESS)return  true
         return false
     }
 

@@ -7,5 +7,4 @@ interface LogInCallback {
 
     fun onLogInSuccess(obj:Any)
     fun onLogInError(obj:Any)
-
 }

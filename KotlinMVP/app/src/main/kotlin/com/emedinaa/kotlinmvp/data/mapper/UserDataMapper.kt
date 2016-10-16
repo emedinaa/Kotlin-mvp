@@ -10,20 +10,19 @@ import com.emedinaa.kotlinmvp.model.entity.User
 class UserDataMapper {
 
     fun transform(userEntity: UserEntity):User{
-        var user:User = User()
+        var user:User = User("","","","")
+        if(userEntity==null)return user
 
+        user= User(userEntity.id,userEntity.username,userEntity.firstname,
+                userEntity.lastname)
         return user
     }
 
     fun transformResponse(loginResponse:LogInResponse):User{
+        var user:User = User("","","","")
+        if(loginResponse==null) return  user
 
-        var user:User = User()
-        if(loginResponse!=null){
-            user.email =loginResponse.email
-            user.name= loginResponse.name
-            user.objectId= loginResponse.objectId
-            user.token= loginResponse.token
-        }
+        user= transform(loginResponse.data!!)
         return user
     }
 }

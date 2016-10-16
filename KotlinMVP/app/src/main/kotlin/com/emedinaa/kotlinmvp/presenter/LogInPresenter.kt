@@ -15,10 +15,12 @@ class LogInPresenter:Presenter<LogInView>,LogInCallback {
     private var logInInteractor:LogInInteractor?=null
 
 
-    fun logIn(email:String,password:String){
-        logInView!!.showLoading()
-        logInInteractor!!.logIn(email,password,this)
-
+    fun logIn(){
+        if(logInView!!.validate())
+        {
+            logInView!!.showLoading()
+            logInInteractor!!.logIn(logInView!!.getUsernameField(),logInView!!.getPasswordField(),this)
+        }
     }
 
     override fun onLogInSuccess(obj: Any) {
