@@ -16,11 +16,8 @@ Postman :
  
 
 
-Referencias :
+References :
 
  - Retrofit
    * https://futurestud.io/tutorials/retrofit-getting-started-and-android-client
    * https://square.github.io/retrofit/
-
-
-
